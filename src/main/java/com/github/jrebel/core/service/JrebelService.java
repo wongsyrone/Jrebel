@@ -53,10 +53,10 @@ public class JrebelService {
                         "zeroIds": [
                            \s
                         ],
-                        "licenseValidFrom": 1490544001000,
+                        "licenseValidFrom": %s,
                         "licenseValidUntil": %s
                     }
-                """.formatted(offline, validFrom, validUntil, System.currentTimeMillis() );
+                """.formatted(offline, validFrom, validUntil, validFrom,validUntil/*System.currentTimeMillis()*/ );
 
         if (clientRandomness == null || username == null || guid == null) {
             response.setStatus(HttpServletResponse.SC_FORBIDDEN);
