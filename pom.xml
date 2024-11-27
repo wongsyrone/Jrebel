@@ -14,12 +14,15 @@
     <artifactId>jrebel</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>jrebel</name>
+    <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
+        <source.level>17</source.level>
+        <target.level>17</target.level>
     </properties>
 
     <dependencies>
@@ -77,6 +80,7 @@
 
 
     <build>
+        <finalName>JrebelLicenseServer</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

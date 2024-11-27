@@ -20,31 +20,37 @@ public class JrebelController {
 
     @RequestMapping({"/jrebel/leases"})
     public void jrebelLeases(HttpServletRequest request, HttpServletResponse response) {
-        log.info("ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
+        log.info("jrebel/leases ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
         jrebelService.jrebelLeasesHandler(request, response);
     }
 
     @RequestMapping("/jrebel/leases/1")
     public void jrebelLeases1(HttpServletRequest request, HttpServletResponse response) {
-        log.info("ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
+        log.info("jrebel/leases/1 ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
+        jrebelService.jrebelLeases1Handler(request, response);
+    }
+
+    @RequestMapping("/agent/features")
+    public void features(HttpServletRequest request, HttpServletResponse response) {
+        log.info("agent/features ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
         jrebelService.jrebelLeases1Handler(request, response);
     }
 
     @RequestMapping("/agent/leases")
     public void agentLeases(HttpServletRequest request, HttpServletResponse response) {
-        log.info("ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
+        log.info("agent/leases ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
         jrebelService.jrebelLeasesHandler(request, response);
     }
 
     @RequestMapping("/agent/leases/1")
     public void agentLeases1(HttpServletRequest request, HttpServletResponse response) {
-        log.info("ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
+        log.info("agent/leases/1 ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
         jrebelService.jrebelLeases1Handler(request, response);
     }
 
     @RequestMapping("/jrebel/validate-connection")
     public void jrebelValidateHandler(HttpServletRequest request, HttpServletResponse response) {
-        log.info("ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
+        log.info("jrebel/validate-connection ip : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
         jrebelService.jrebelValidateHandler(request, response);
     }
 
